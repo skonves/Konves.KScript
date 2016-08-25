@@ -7,5 +7,10 @@ assembly_info:
 before_build:
   - nuget restore
 build:
-  publish_nuget: false
+  publish_nuget: true
   verbosity: minimal
+before_package:
+- ps: >-
+    (Get-Content "$env:APPVEYOR_BUILD_FOLDER\src\Konves.KScript\Konves.KScript.nuspec") `
+        -replace '<version>[^<]*?</version>', ('<version>{0}</version>' -f $env:APPVEYOR_BUILD_VERSION) |
+      Out-File "$env:APPVEYOR_BUILD_FOLDER\src\Konves.KScript\Konves.KScript.nuspec"
