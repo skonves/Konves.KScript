@@ -4,15 +4,15 @@
     <id>Konves.KScript</id>
     <title>Konves.KScript</title>
     <version>$version$</version>
-    <authors>$author$</authors>
+    <authors>skonves</authors>
     <owners>skonves</owners>
     <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
     <projectUrl>https://github.com/skonves/Konves.KScript</projectUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <description>$description$</description>
+    <description>Simple scripting language for compiling and evaluating expressions</description>
     <releaseNotes>Initial release.</releaseNotes>
     <copyright>Copyright 2016 $author$</copyright>
-    <tags>Simple scripting language for compiling and evaluating expressions</tags>
+    <tags></tags>
   </metadata>
   <files>
     <file src="$project$bin\$configuration$\*.pdb" target="lib\net45" />
