@@ -1,7 +1,10 @@
+[![Build status](https://img.shields.io/appveyor/ci/skonves/konves-kscript.svg?maxAge=2592000)](https://ci.appveyor.com/project/skonves/konves-kscript)
+[![Build status](https://img.shields.io/nuget/v/Konves.Kscript.svg?maxAge=2592000)](https://www.nuget.org/packages/Konves.KScript/)
+
 # KScript
 KScript provides a simple way to create and evaluate compiled expressions:
 
-```
+``` CSharp
 var exp = new Expression("NOW > '2016-1-1' OR ({IsEmployee} = TRUE AND {Department} IN ['Testers', 'Developers'])");
 
 IDictionary<string, object> state = 
@@ -9,7 +12,7 @@ IDictionary<string, object> state =
         { "IsEmployee", true },
         { "Department", "Call Center" },
         { "StartDate", "2010-5-10" } // Not used
-    }
+    };
 
 bool result = exp.Evaluate(state}; // false
 ```
