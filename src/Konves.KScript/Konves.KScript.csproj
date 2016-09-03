@@ -60,12 +60,12 @@
     <Compile Include="LiteralType.cs" />
     <Compile Include="LiteralValue.cs" />
     <Compile Include="ParseException.cs" />
-    <Compile Include="Parsing\KScriptBaseListener.cs" />
-    <Compile Include="Parsing\KScriptBaseVisitor.cs" />
-    <Compile Include="Parsing\KScriptLexer.cs" />
-    <Compile Include="Parsing\KScriptListener.cs" />
-    <Compile Include="Parsing\KScriptParser.cs" />
-    <Compile Include="Parsing\KScriptVisitor.cs" />
+    <Compile Include="Parsing\KScriptBaseListener.g.cs" />
+    <Compile Include="Parsing\KScriptBaseVisitor.g.cs" />
+    <Compile Include="Parsing\KScriptLexer.g.cs" />
+    <Compile Include="Parsing\KScriptListener.g.cs" />
+    <Compile Include="Parsing\KScriptParser.g.cs" />
+    <Compile Include="Parsing\KScriptVisitor.g.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
