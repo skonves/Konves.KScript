@@ -1,5 +1,6 @@
 [![Build status](https://img.shields.io/appveyor/ci/skonves/konves-kscript.svg?maxAge=2592000)](https://ci.appveyor.com/project/skonves/konves-kscript)
-[![Build status](https://img.shields.io/nuget/v/Konves.Kscript.svg?maxAge=2592000)](https://www.nuget.org/packages/Konves.KScript/)
+[![Nuget package](https://img.shields.io/nuget/v/Konves.Kscript.svg?maxAge=2592000)](https://www.nuget.org/packages/Konves.KScript/)
+[![Test coverage](https://img.shields.io/coveralls/skonves/Konves.KScript.svg?maxAge=1000)](https://coveralls.io/github/skonves/Konves.KScript/)
 
 # KScript
 KScript provides a simple way to create and evaluate compiled expressions:
