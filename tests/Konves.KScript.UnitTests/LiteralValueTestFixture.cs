@@ -49,12 +49,15 @@ namespace Konves.KScript.UnitTests
 			[TestMethod]
 			public void EqualityOperatorTest()
 			{
+				DoEqualityOperatorTest(null, null, true);
+
 				DoEqualityOperatorTest("asdf", "asdf", true);
 				DoEqualityOperatorTest("asdf", "ASDF", false);
 
 				DoEqualityOperatorTest(DateTime.Parse("2015-1-1"), "2015-1-1", true);
 				DoEqualityOperatorTest("2015-1-1", DateTime.Parse("2015-1-1"), true);
 				DoEqualityOperatorTest(DateTime.Parse("2015-1-1"), DateTime.Parse("2015-1-1"), true);
+				DoEqualityOperatorTest("2015-1-1", "2015-1-1T00:00:00", true);
 
 				DoEqualityOperatorTest((decimal)5, (decimal)5, true);
 				DoEqualityOperatorTest("5", (decimal)5, false);
