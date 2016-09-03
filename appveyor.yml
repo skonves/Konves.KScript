@@ -9,6 +9,8 @@ before_build:
 build:
   publish_nuget: true
   verbosity: minimal
+after_test:
+- cmd: vstest.console
 before_package:
 - ps: >-
     (Get-Content "$env:APPVEYOR_BUILD_FOLDER\src\Konves.KScript\Konves.KScript.nuspec") `
