@@ -17,6 +17,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{EA274227-6C55-478E-9EB4-9B01C4AF89BA}"
 	ProjectSection(SolutionItems) = preProject
 		appveyor.yml = appveyor.yml
+		coverage.cmd = coverage.cmd
 	EndProjectSection
 EndProject
 Global
