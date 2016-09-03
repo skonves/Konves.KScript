@@ -53,6 +53,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AndExpressionTestFixture.cs" />
+    <Compile Include="BooleanLiteralExpressionTestFixture.cs" />
     <Compile Include="ErrorListenerTestFixture.cs" />
     <Compile Include="LiteralValueTestFixture.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
