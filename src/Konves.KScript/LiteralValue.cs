@@ -2,11 +2,14 @@
 
 namespace Konves.KScript
 {
-	internal sealed class LiteralValue
+	public sealed class LiteralValue
 	{
 		public LiteralValue(object value)
 		{
-			_value = value;
+			if (value is DateTime || value is decimal || value is string || value is bool)
+				_value = value;
+			else
+				throw new ArgumentException($"'{nameof(value)}' must be of type {nameof(DateTime)}, {nameof(Decimal)}, {nameof(String)}, or {nameof(Boolean)}", nameof(value));
 		}
 
 		readonly object _value;

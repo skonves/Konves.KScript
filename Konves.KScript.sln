@@ -10,6 +10,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Konves.KScript", "src\Konve
 		{9AD543C7-3D35-4A83-8971-AE736EBDFD52} = {9AD543C7-3D35-4A83-8971-AE736EBDFD52}
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{1C467AB3-69B7-4CDE-9ED3-C9265E43EFBF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Konves.KScript.UnitTests", "tests\Konves.KScript.UnitTests\Konves.KScript.UnitTests.csproj", "{B78954F1-CEA4-4741-A07A-BEB256CA2112}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,8 +28,15 @@ Global
 		{6BDDADD4-470D-424F-9962-8BCC05C32A22}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6BDDADD4-470D-424F-9962-8BCC05C32A22}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6BDDADD4-470D-424F-9962-8BCC05C32A22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B78954F1-CEA4-4741-A07A-BEB256CA2112}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B78954F1-CEA4-4741-A07A-BEB256CA2112}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B78954F1-CEA4-4741-A07A-BEB256CA2112}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B78954F1-CEA4-4741-A07A-BEB256CA2112}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B78954F1-CEA4-4741-A07A-BEB256CA2112} = {1C467AB3-69B7-4CDE-9ED3-C9265E43EFBF}
 	EndGlobalSection
 EndGlobal
