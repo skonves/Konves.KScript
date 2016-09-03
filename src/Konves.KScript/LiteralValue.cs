@@ -95,7 +95,7 @@ namespace Konves.KScript
 			else if (a._value is string && b._value is DateTime && aIsDate)
 				return dateA >= (DateTime)b._value;
 			else
-				return true;
+				return false;
 		}
 
 		public static bool operator <=(LiteralValue a, LiteralValue b)
@@ -123,7 +123,7 @@ namespace Konves.KScript
 			else if (a._value is string && b._value is DateTime && aIsDate)
 				return dateA <= (DateTime)b._value;
 			else
-				return true;
+				return false;
 		}
 
 		public static bool operator <(LiteralValue a, LiteralValue b)
