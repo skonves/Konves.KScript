@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Konves.KScript
 {
@@ -20,7 +17,7 @@ namespace Konves.KScript
 			{
 				case LiteralType.Token:
 					object value;
-					return new LiteralValue(state.TryGetValue(_value as string, out value) ? value : null);
+					return new LiteralValue(_value is string && state.TryGetValue(_value as string, out value) ? value : null);
 
 				case LiteralType.Date:
 					return new LiteralValue(DateTime.UtcNow);

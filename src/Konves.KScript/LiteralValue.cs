@@ -181,5 +181,19 @@ namespace Konves.KScript
 			else
 				return false;
 		}
+
+		public override bool Equals(object obj)
+		{
+			LiteralValue other = obj as LiteralValue;
+
+			return !ReferenceEquals(other, null) && (
+				(ReferenceEquals(_value, null) && ReferenceEquals(other._value, null))
+				|| (!ReferenceEquals(_value, null) && _value.Equals(other._value)));
+		}
+
+		public override int GetHashCode()
+		{
+			return _value?.GetHashCode() ?? 0;
+		}
 	}
 }
