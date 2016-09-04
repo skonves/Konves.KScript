@@ -28,6 +28,9 @@ namespace Konves.KScript.UnitTests
 
 			DoEvaluateTest($"{{{nameof(stringValue)}}} = '{stringValue}'", state, true);
 			DoEvaluateTest($"TRUE != FALSE", state, true);
+			DoEvaluateTest($"NOW > '2000-1-1'", state, true);
+			DoEvaluateTest($"NULL IS NOT NULL", state, false);
+			DoEvaluateTest($"(5) > (1)", state, true);
 		}
 
 		private void DoEvaluateTest(string s, IDictionary<string, object> state, bool expected)
