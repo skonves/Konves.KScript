@@ -2,6 +2,7 @@
 
 namespace Konves.KScript.UnitTests
 {
+	[TestClass]
 	public class ParseExpceptionTestFixture
 	{
 		[TestCategory(nameof(ParseException))]
