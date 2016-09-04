@@ -31,6 +31,11 @@ namespace Konves.KScript.UnitTests
 			DoEvaluateTest($"NOW > '2000-1-1'", state, true);
 			DoEvaluateTest($"NULL IS NOT NULL", state, false);
 			DoEvaluateTest($"(5) > (1)", state, true);
+
+			DoEvaluateTest($"TRUE OR FALSE", state, true);
+			DoEvaluateTest($"5 BETWEEN 1 AND 10", state, true);
+			DoEvaluateTest($"'asdf' IN ['asdf','qwerty']", state, true);
+			DoEvaluateTest($"TRUE AND NOT FALSE", state, true);
 		}
 
 		private void DoEvaluateTest(string s, IDictionary<string, object> state, bool expected)
