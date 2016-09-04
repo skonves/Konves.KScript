@@ -33,7 +33,7 @@ namespace Konves.KScript.UnitTests
 			DoEvaluateTest($"(5) > (1)", state, true);
 
 			DoEvaluateTest($"TRUE OR FALSE", state, true);
-			DoEvaluateTest($"5 BETWEEN 1 AND 10", state, true);
+			DoEvaluateTest($"(5 BETWEEN 1 AND 10)", state, true);
 			DoEvaluateTest($"'asdf' IN ['asdf','qwerty']", state, true);
 			DoEvaluateTest($"TRUE AND NOT FALSE", state, true);
 		}
