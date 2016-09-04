@@ -8,7 +8,7 @@ namespace Konves.KScript.UnitTests
 	[TestClass]
 	public class InExpressionTestFixture
 	{
-		[TestCategory("AndExpression")]
+		[TestCategory(nameof(InExpression))]
 		[TestMethod]
 		public void TestEvaluate()
 		{
