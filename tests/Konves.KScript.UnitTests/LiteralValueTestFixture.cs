@@ -325,5 +325,27 @@ namespace Konves.KScript.UnitTests
 			// Assert
 			Assert.AreEqual(expected, result);
 		}
+
+		[TestCategory("LiteralValue")]
+		[TestMethod]
+		public void GetHashCodeTest()
+		{
+			DoGetHashCodeTest(null);
+			DoGetHashCodeTest("asdf");
+			DoGetHashCodeTest(5m);
+			DoGetHashCodeTest(DateTime.Parse("2015-1-1"));
+			DoGetHashCodeTest(true);
+		}
+
+		private void DoGetHashCodeTest(object obj)
+		{
+			// Arrange
+			LiteralValue sut = new LiteralValue(obj);
+
+			// Act
+			int result = sut.GetHashCode();
+
+			// Assert
+		}
 	}
 }
