@@ -121,5 +121,55 @@ namespace Konves.KScript.UnitTests
 
 			literal.GetLiteralValue(null);
 		}
+
+		[TestCategory("Literal")]
+		[TestMethod]
+		public void EqualsTest()
+		{
+			DoEqualsTest("asdf", LiteralType.Value, "asdf", LiteralType.Value, true);
+			DoEqualsTest("asdf", LiteralType.Value, "asdf", LiteralType.Date, false);
+			DoEqualsTest("asdf", LiteralType.Value, "qwerty", LiteralType.Value, false);
+			DoEqualsTest("asdf", LiteralType.Value, "qwerty", LiteralType.Date, false);
+
+			DoEqualsTest(DateTime.Parse("2015-1-1"), LiteralType.Value, DateTime.Parse("2015-1-1"), LiteralType.Value, true);
+			DoEqualsTest(DateTime.Parse("2015-1-1"), LiteralType.Value, DateTime.Parse("2015-1-1"), LiteralType.Date, false);
+			DoEqualsTest(DateTime.Parse("2015-1-1"), LiteralType.Value, DateTime.Parse("2015-2-1"), LiteralType.Value, false);
+			DoEqualsTest(DateTime.Parse("2015-1-1"), LiteralType.Value, DateTime.Parse("2015-2-1"), LiteralType.Date, false);
+		}
+
+		private void DoEqualsTest(object a, LiteralType aType, object b, LiteralType bType, bool expected)
+		{
+			// Arrange
+			Literal aa = new Literal(a, aType);
+			Literal bb = new Literal(b, bType);
+
+			// Act
+			bool result = aa.Equals(bb);
+
+			// Assert
+			Assert.AreEqual(expected, result);
+		}
+
+		[TestCategory("Literal")]
+		[TestMethod]
+		public void GetHashCodeTest()
+		{
+			DoGetHashCodeTest(null, LiteralType.Value);
+			DoGetHashCodeTest("asdf", LiteralType.Value);
+			DoGetHashCodeTest(5m, LiteralType.Value);
+			DoGetHashCodeTest(DateTime.Parse("2015-1-1"), LiteralType.Value);
+			DoGetHashCodeTest(true, LiteralType.Value);
+		}
+
+		private void DoGetHashCodeTest(object obj, LiteralType type)
+		{
+			// Arrange
+			Literal sut = new Literal(obj, type);
+
+			// Act
+			int result = sut.GetHashCode();
+
+			// Assert
+		}
 	}
 }

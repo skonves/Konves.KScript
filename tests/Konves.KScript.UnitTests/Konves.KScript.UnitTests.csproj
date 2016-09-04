@@ -53,6 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ExpressionTestFixture.cs" />
     <Compile Include="RelationalExpressionTestFixture.cs" />
     <Compile Include="NotExpressionTestFixture.cs" />
     <Compile Include="OrExpressionTestFixture.cs" />

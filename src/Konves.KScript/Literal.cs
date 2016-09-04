@@ -30,6 +30,20 @@ namespace Konves.KScript
 			}
 		}
 
+		public override bool Equals(object obj)
+		{
+			Literal other = obj as Literal;
+
+			return !ReferenceEquals(other, null) &&
+				((ReferenceEquals(_value, null) && ReferenceEquals(other._value, null)) || (!ReferenceEquals(_value, null) && _value.Equals(other._value)))
+				&& (_type == other._type);
+		}
+
+		public override int GetHashCode()
+		{
+			return (_type.GetHashCode() * 8191) ^ (_value?.GetHashCode() ?? 0);
+		}
+
 		readonly object _value;
 		readonly LiteralType _type;
 	}
